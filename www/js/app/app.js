@@ -25,5 +25,9 @@ app = angular.module('PNPAA', [
       url: "/categories",
       templateUrl: "partials/categories.html"
     })
+    .state('login', {
+      url: "/login",
+      templateUrl: "partials/login.html"
+    })
 })
 ;
