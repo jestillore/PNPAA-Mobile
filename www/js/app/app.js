@@ -1,9 +1,12 @@
 'use strict';
 
+var app;
+
 app = angular.module('PNPAA', [
   'ui.router',
   'ngTouch',
-  'mobile-angular-ui'
+  'mobile-angular-ui',
+  'Controllers'
 ])
 .config(function($stateProvider, $urlRouterProvider){
 
@@ -15,7 +18,8 @@ app = angular.module('PNPAA', [
     .state('home', {
       url: "/home",
       templateUrl: "partials/home.html",
-      abstract: true
+      abstract: true,
+      controller: 'HomeCtrl'
     })
     .state('home.index', {
       url: "/index",
