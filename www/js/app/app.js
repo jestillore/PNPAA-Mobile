@@ -3,12 +3,13 @@
 app = angular.module('PNPAA', [
   'ui.router',
   'ngTouch',
-  'mobile-angular-ui'
+  'mobile-angular-ui',
+  'Controllers'
 ])
 .config(function($stateProvider, $urlRouterProvider){
 
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/home/index");
+  $urlRouterProvider.otherwise("/login");
 
   // Now set up the states
   $stateProvider
@@ -27,7 +28,8 @@ app = angular.module('PNPAA', [
     })
     .state('login', {
       url: "/login",
-      templateUrl: "partials/login.html"
+      templateUrl: "partials/login.html",
+      controller: 'LoginCtrl'
     })
 })
 ;
