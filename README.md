@@ -7,6 +7,7 @@ Features
 ---------
 - Forum (categorized by department)
 - Officers and Members Database
+- Events
 
 Contribution
 -----------
