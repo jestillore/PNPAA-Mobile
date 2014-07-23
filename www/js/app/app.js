@@ -31,4 +31,5 @@ app = angular.module('PNPAA', [
       templateUrl: "partials/categories.html"
     })
 })
+.value('domain', 'http://pnpaa.herokuapp.com')
 ;
