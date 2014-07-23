@@ -1,5 +1,7 @@
 'use strict';
 
+var app;
+
 app = angular.module('PNPAA', [
   'ui.router',
   'ngTouch',
@@ -9,14 +11,15 @@ app = angular.module('PNPAA', [
 .config(function($stateProvider, $urlRouterProvider){
 
   // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/login");
+  $urlRouterProvider.otherwise("/home/index");
 
   // Now set up the states
   $stateProvider
     .state('home', {
       url: "/home",
       templateUrl: "partials/home.html",
-      abstract: true
+      abstract: true,
+      controller: 'HomeCtrl'
     })
     .state('home.index', {
       url: "/index",
@@ -25,11 +28,6 @@ app = angular.module('PNPAA', [
     .state('home.categories', {
       url: "/categories",
       templateUrl: "partials/categories.html"
-    })
-    .state('login', {
-      url: "/login",
-      templateUrl: "partials/login.html",
-      controller: 'LoginCtrl'
     })
 })
 ;
