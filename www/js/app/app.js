@@ -6,7 +6,8 @@ app = angular.module('PNPAA', [
   'ui.router',
   'ngTouch',
   'mobile-angular-ui',
-  'Controllers'
+  'Controllers',
+  'Services'
 ])
 .config(function($stateProvider, $urlRouterProvider){
 
