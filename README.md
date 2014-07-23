@@ -1,4 +1,12 @@
 PNPAA-Mobile
 ============
 
-PNPAA collaboration tool.
+PNPAA basic collaboration tool.
+
+Features
+---------
+> Forum (categorized by department)
+> Officers and Members Database
+
+
+Cheers!
