@@ -26,9 +26,10 @@ app = angular.module('PNPAA', [
       url: "/index",
       templateUrl: "partials/index.html"
     })
-    .state('home.categories', {
-      url: "/categories",
-      templateUrl: "partials/categories.html"
+    .state('home.department', {
+      url: "/department/:deptId",
+      templateUrl: "partials/department/index.html",
+      controller: 'DepCtrl'
     })
 })
 .value('domain', 'http://pnpaa.herokuapp.com')

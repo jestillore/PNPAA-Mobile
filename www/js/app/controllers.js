@@ -5,4 +5,6 @@ angular.module('Controllers', [])
   $scope.departments = Department.query();
   $scope.posts = Post.query();
 })
+.controller('DepCtrl', function($scope){
+})
 ;
