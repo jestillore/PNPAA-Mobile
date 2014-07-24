@@ -17,7 +17,7 @@ app = {
           alert("Login failed! Please try again.")
         }
         $('#login-btn').html('Login').removeAttr('disabled');
-      })
+      }).fail()
     });
   },
   authorize: function(){
