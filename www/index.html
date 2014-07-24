@@ -33,29 +33,18 @@
           <!-- start login -->
           <div class="scrollable" class="full-size">
             <div class="scrollable-content">
-              <div class="container padding-top">
-                <div class="row">
-                  <div class="col-sm-12">
-                      <div class="panel panel-default">
-                        <div class="panel-body">
-                          <h4 class="text-center">PNPAA</h4>
-                          <hr>
-                          <form role="form" id="login-form">
-                            <div class="form-group">
-                              <label for="">Username</label>
-                              <input type="text" name="user[email]" class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label for="">Password</label>
-                              <input type="password" name="user[password]" class="form-control">
-                            </div>
-                            <button class="btn btn-success" type="submit" id="login-btn">Login</button>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
+              <div bs-panel title="PNPAA Bulletin Login">
+                <form role="form" id="login-form">
+                  <div class="form-group">
+                    <label for="">Username</label>
+                    <input type="text" name="username" class="form-control">
                   </div>
-                </div>
+                  <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" name="password" class="form-control">
+                  </div>
+                  <button class="btn btn-success" type="submit">Login</button>
+                </form>
               </div>
             </div>
           </div>
