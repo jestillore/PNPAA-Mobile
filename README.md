@@ -9,6 +9,11 @@ Features
 - Officers and Members Database
 - Events
 
+Technologies
+------------
+- [mobile-angular-ui](http://mobileangularui.com/docs/)
+- [Cordova](http://cordova.apache.org/)
+
 Contribution
 -----------
 
