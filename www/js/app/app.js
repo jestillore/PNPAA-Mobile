@@ -26,6 +26,11 @@ app = angular.module('PNPAA', [
       url: "/index",
       templateUrl: "partials/posts/index.html"
     })
+    .state('home.post', {
+      url: "/post/:postId",
+      templateUrl: "partials/posts/show.html",
+      controller: 'PostCtrl'
+    })
     .state('home.my_posts', {
       url: "/my-posts",
       templateUrl: "partials/posts/my-posts.html"
@@ -39,11 +44,6 @@ app = angular.module('PNPAA', [
       url: "/department/:deptId",
       templateUrl: "partials/department/index.html",
       controller: 'DepCtrl'
-    })
-    .state('home.post', {
-      url: "/post/:postId",
-      templateUrl: "partials/posts/show.html",
-      controller: 'PostCtrl'
     })
 })
 .value('domain', 'http://pnpaa.herokuapp.com')

@@ -8,6 +8,6 @@ angular.module('Services', ['ngResource'])
   return $resource(domainPath('/departments'));
 })
 .factory('Post', function($resource){
-  return $resource(domainPath('/posts'));
+  return $resource(domainPath('/posts/:id'), {id: '@id'});
 })
 ;
