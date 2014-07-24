@@ -28,7 +28,7 @@ app = angular.module('PNPAA', [
     })
     .state('home.my_posts', {
       url: "/my-posts",
-      templateUrl: "partials/posts/index.html"
+      templateUrl: "partials/posts/my-posts.html"
     })
     .state('home.events', {
       url: "/events",
