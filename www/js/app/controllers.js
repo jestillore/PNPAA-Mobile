@@ -7,4 +7,10 @@ angular.module('Controllers', [])
 })
 .controller('DepCtrl', function($scope){
 })
+.controller('EventsCtrl', function($scope){
+  
+})
+.controller('PostCtrl', function($scope){
+  
+})
 ;
