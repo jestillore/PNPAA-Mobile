@@ -4,8 +4,9 @@ app = {
     document.addEventListener('deviceready', this.checkAuth, false);
   },
   checkAuth: function(){
+
     chrome.storage.local.get('user_id', function(obj) {
-      if(obj.hasOwnProperty("user_id")){
+      if(typeof obj == 'object' && obj.hasOwnProperty("user_id")){
         app.authorize()
       }else{
         $("#login-form").submit(function(e){
@@ -13,6 +14,7 @@ app = {
           app.authorize();
         });
       }
+
     })
   },
   authorize: function(){

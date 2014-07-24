@@ -24,11 +24,26 @@ app = angular.module('PNPAA', [
     })
     .state('home.index', {
       url: "/index",
-      templateUrl: "partials/index.html"
+      templateUrl: "partials/posts/index.html"
     })
-    .state('home.categories', {
-      url: "/categories",
-      templateUrl: "partials/categories.html"
+    .state('home.post', {
+      url: "/post/:postId",
+      templateUrl: "partials/posts/show.html",
+      controller: 'PostCtrl'
+    })
+    .state('home.my_posts', {
+      url: "/my-posts",
+      templateUrl: "partials/posts/my-posts.html"
+    })
+    .state('home.events', {
+      url: "/events",
+      templateUrl: "partials/events/index.html",
+      controller: 'EventsCtrl'
+    })
+    .state('home.department', {
+      url: "/department/:deptId",
+      templateUrl: "partials/department/index.html",
+      controller: 'DepCtrl'
     })
 })
 .value('domain', 'http://pnpaa.herokuapp.com')
