@@ -7,24 +7,11 @@
         "files": {
             "res/xml/config.xml": {
                 "parents": {
-                    "/widget": [
-                        {
-                            "xml": "<feature name=\"ChromeStorage\"><param name=\"android-package\" value=\"org.chromium.ChromeStorage\" /></feature>",
-                            "count": 1
-                        }
-                    ]
+                    "/widget": []
                 }
             }
         }
     },
-    "installed_plugins": {
-        "org.chromium.storage": {
-            "PACKAGE_NAME": "org.pnpaa.fourhorsemen"
-        }
-    },
-    "dependent_plugins": {
-        "org.chromium.common": {
-            "PACKAGE_NAME": "org.pnpaa.fourhorsemen"
-        }
-    }
+    "installed_plugins": {},
+    "dependent_plugins": {}
 }
