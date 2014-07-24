@@ -1,21 +1,24 @@
-window.initialized = false;
+var app;
+
 app = {
   init: function(){
     document.addEventListener('deviceready', this.checkAuth, false);
   },
   checkAuth: function(){
-
-    chrome.storage.local.get('user_id', function(obj) {
-      if(typeof obj == 'object' && obj.hasOwnProperty("user_id")){
-        app.authorize()
-      }else{
-        $("#login-form").submit(function(e){
-          e.preventDefault();
+    $("#login-form").submit(function(e){
+      e.preventDefault();
+      $('#login-btn').attr('disabled', 'disabled').html('Logging in...');
+      $.post("http://pnpaa.herokuapp.com/users/sign_in", $(this).serialize(), function(res){
+        if(res.success){
+          window.user = res;
           app.authorize();
-        });
-      }
-
-    })
+        }
+        else{
+          alert("Login failed! Please try again.")
+        }
+        $('#login-btn').html('Login').removeAttr('disabled');
+      })
+    });
   },
   authorize: function(){
     $("#app").html('');

@@ -4,6 +4,7 @@ angular.module('Controllers', ['ui.router'])
 .controller('HomeCtrl', function($scope, Department, Post){
   $scope.departments = Department.query();
   $scope.posts = Post.query();
+  $scope.user = window.user
 })
 .controller('DepCtrl', function($scope){
 })
