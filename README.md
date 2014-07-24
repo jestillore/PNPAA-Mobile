@@ -33,7 +33,7 @@ Maintainers
 
 Contributors
 -----------
-> Be the first to put your name!
+> None as of the moment
 
 License
 ----------
