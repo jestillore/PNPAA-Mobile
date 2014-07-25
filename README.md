@@ -9,6 +9,9 @@ Features
 - Events
 - Officers and Members Database
 
+> Future Plan(s)
+> - Individual financial transactions tracking
+
 Technologies
 ------------
 - [Cordova](http://cordova.apache.org/)
