@@ -11,8 +11,9 @@ Features
 
 Technologies
 ------------
-- [mobile-angular-ui](http://mobileangularui.com/docs/)
 - [Cordova](http://cordova.apache.org/)
+- [AngularJS](https://angularjs.org/)
+- [mobile-angular-ui](http://mobileangularui.com/docs/)
 
 Contribution
 -----------
