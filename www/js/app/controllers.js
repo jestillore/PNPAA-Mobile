@@ -9,7 +9,6 @@ angular.module('Controllers', ['ui.router'])
 .controller('DepCtrl', function($scope){
 })
 .controller('EventsCtrl', function($scope){
-  
 })
 .controller('PostCtrl', function($scope, $stateParams, Post){
   $scope.params = $stateParams

@@ -5,26 +5,38 @@ app = {
     document.addEventListener('deviceready', this.checkAuth, false);
   },
   checkAuth: function(){
-    $("#login-form").submit(function(e){
-      e.preventDefault();
-      $('#login-btn').attr('disabled', 'disabled').html('Logging in...');
-      $.post("http://pnpaa.herokuapp.com/users/sign_in", $(this).serialize())
-      .done(function(res){
-        if(res.success){
-          window.user = res.user;
-          app.authorize();
-        }
-        else{
-          alert("Login failed! Please try again.")
-        }
-      })
-      .fail(function(){
-        alert('Please check your network connectivity.')
-      })
-      .always(function(){
-        $('#login-btn').html('Login').removeAttr('disabled');
-      })
-    });
+    database.prepare();
+    database.getUser(function(result){
+      if(result.success){
+        $("#cover").remove();
+        window.user = result.user
+        app.authorize()
+      }
+      else{
+        $("#cover").remove();
+        $("#login-form").submit(function(e){
+          e.preventDefault();
+          $('#login-btn').attr('disabled', 'disabled').html('Logging in...');
+          $.post("http://pnpaa.herokuapp.com/users/sign_in", $(this).serialize())
+          .done(function(res){
+            if(res.success){
+              database.saveUser(res.user, function(){
+                app.authorize();
+              })
+            }
+            else{
+              alert("Login failed.")
+            }
+          })
+          .fail(function(){
+            alert('Please check your network connectivity.')
+          })
+          .always(function(){
+            $('#login-btn').html('Login <span class="fa fa-chevron-right"></span>').removeAttr('disabled');
+          })
+        });
+      }
+    })
   },
   authorize: function(){
     $("#app").html('');
