@@ -5,6 +5,10 @@ angular.module('Controllers', ['ui.router'])
   $scope.departments = Department.query();
   $scope.posts = Post.query();
   $scope.user = window.user
+  $scope.logout = function(){
+    database.empty();
+    window.location.reload();
+  }
 })
 .controller('DepCtrl', function($scope){
 })
