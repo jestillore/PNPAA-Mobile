@@ -20,7 +20,7 @@ var database = {
   empty: function(){
     db = database.instance()
     db.transaction(function(tx){
-      tx.executeSql('DELETE * FROM USERS');
+      tx.executeSql('DELETE FROM USERS WHERE 1');
     }, function errorCB(err) {
       alert("Error processing SQL: "+err.code);
     }, function(){})
