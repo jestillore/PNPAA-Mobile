@@ -10,4 +10,7 @@ angular.module('Services', ['ngResource'])
 .factory('Post', function($resource){
   return $resource(domainPath('/posts/:id'), {id: '@id'});
 })
+.factory('User', function($resource){
+  return $resource(domainPath('/users/:id'), {id: '@id'});
+})
 ;
