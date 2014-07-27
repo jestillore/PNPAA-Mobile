@@ -21,6 +21,7 @@ app = {
           .done(function(res){
             if(res.success){
               database.saveUser(res.user, function(){
+                window.user = res.user
                 app.authorize();
               })
             }
